@@ -37,6 +37,6 @@ public class JourneyController : ControllerBase
         => await _mediator.Send(new DeleteJourneyCommand(id));
     
     [HttpGet("GetAll")]
-    public async Task<List<Journey>> GetAll(Guid id)
+    public async Task<List<Journey>> GetAll()
         => await _mediator.Send(new GetAllJourneysCommand());
 }

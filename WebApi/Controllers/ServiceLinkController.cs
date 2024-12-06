@@ -37,6 +37,6 @@ public class ServiceLinkController : ControllerBase
         => await _mediator.Send(new DeleteServiceLinkCommand(id));
     
     [HttpGet("GetAll")]
-    public async Task<List<ServiceLink>> GetAll(Guid id)
+    public async Task<List<ServiceLink>> GetAll()
         => await _mediator.Send(new GetAllServiceLinkCommand());
 }

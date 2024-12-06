@@ -37,6 +37,6 @@ public class StopController : ControllerBase
         => await _mediator.Send(new DeleteStopCommand(id));
     
     [HttpGet("GetAll")]
-    public async Task<List<Stop>> GetAll(Guid id)
+    public async Task<List<Stop>> GetAll()
         => await _mediator.Send(new GetAllStopCommand());
 }
